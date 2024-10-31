@@ -1,53 +1,54 @@
-# 🤖 AI-Assisted REST API for PostgreSQL
+> [Ver en inglés/See in english](https://github.com/LuisMiSanVe/AI_DB_REST_API/tree/main)
+# 🤖 REST API para PostgreSQL Asistida por IA
 
-This REST API uses Google's AI 'Gemini 1.5 Flash' to make queries to PostgreSQL databases.  
-The AI interprets natural language into SQL queries using two different methods, each with its pros and cons.
+Esta REST API usa la IA de Google 'Gemini 1.5 Flash' para generar consultas a bases de datos PostgreSQL.  
+La IA convierte lenguaje natural a consultas SQL usando dos métodos diferentes, cada uno con sus ventajas y desvenajas.
 
-## 📋 Prerequisites
+## 📋 Prerequisitos
 
-To make this API work, you'll need a PostgreSQL Server and a Gemini API Key.
+Para que la API funcione, necesiatarás un servidor PostgreSQL y una clave de la API de Gemini.
 
 > [!NOTE]  
-> I'll use pgAdmin to build the PostgreSQL Server.
+> Yo usaré pgAdmin para montar el servidor PostgreSQL.
 
-## 🛠️ Setup
+## 🛠️ Instalación
 
-If you don't have it, download [pgAdmin 4 from the official website](https://www.pgadmin.org/download/).  
-Now, create the PostgreSQL Server and set up a database with a few tables and insert values.
+Si no lo tienes, descarga [pgAdmin 4 desde su página ofical](https://www.pgadmin.org/download/).  
+Ahora, crea el servidor y monta la base de datos con algunas tablas y valores.
 
-Next, obtain your Gemini API Key by visiting [Google AI Studio](https://aistudio.google.com/app/apikey). Ensure you're logged into your Google account, then press the blue button that says 'Create API key' and follow the steps to set up your Google Cloud Project and retrieve your API key. **Make sure to save it in a safe place**.  
-Google allows free use of this API without adding billing information, but there are some limitations.
+Después, obten tu clave de la API de Gemini yendo aqui: [Google AI Studio](https://aistudio.google.com/app/apikey). Asegurate de tener tu sesión de Google abierta, y encontes dale al botón que dice 'Crear clave de API' y sigue los pasos para crear tu proyecto de Google Cloud y conseguir tu clave de API. **Guardala en algún sitio seguro**.  
+Google permite el uso gratuito de esta API sin añadir ninguna forma de pago, pero con algunas limitaciones.
 
-In Google AI Studio, you can monitor the AI's usage by clicking 'View usage data' in the 'Plan' column where your projects are displayed. I recommend monitoring the 'Quota and system limits' tab and sorting by 'actual usage percentage,' as it provides the most detailed information.
+En Google AI Studio, puedes monitorizar el uso de la IA haciendo clic en 'Ver datos de uso' en la columna de 'Plan' en la tabla con todos tus proyectos. Recomiendo monitorizarla desde la pestaña de 'Cuota y límites del sistema' y ordenando por 'Porcentaje de uso actual', ya que es donde más información obtienes.
 
-You now have everything needed to make the API work.  
-Simply replace the default values in the 'database' string in `AIAPI/Controllers/AIController.cs` with your database information, and place your API Key in the 'apiKey' string.
+Ya tienes todo para hacer funcionar la REST API.  
+Simpemente reemplaza los valores por defecto del string 'database' en `AIAPI/Controllers/AIController.cs` con la información de tu base de datos, y poner la clave de API en el string 'apiKey'.
 
-## 📖 About the REST API
+## 📖 Sobre la REST API
 
-The API has one Controller with two endpoints:
+La API tiene un Controlador con dos endpoints:
 
 - **AIDatabaseMapping**  
-  This maps the entire database into a JSON that Gemini analyzes to return a table with the requested data.  
-  Due to the nature of this method, larger databases may overwhelm the system's resources. To prevent this, there's a parameter to limit how many rows Gemini will learn from.  
-  The data returned by AIDatabaseMapping is AI-generated, so some data may be fabricated. To verify this, there is a parameter that allows the AI to generate the equivalent SQL query, which you can run on the PostgreSQL Server to check the accuracy of the data.
+  Mapea la base de datos entera en un JSON la cual Gemini analiza para devolver la tabla que correspondría la solicitud enviada.  
+  Debido a la naturaleza del método, bases de datos muy grandes puedes sobrepasar los requisitos del sistema. Para prevenir esto, hay parametros para limitar que tantas filas aprende Gemini.  
+  Toda la información recogida está generada directamente por la IA, por lo que es posible que haya información inventada. Para verificarlo, hay un parametro que hace que la IA genere la SQL necesaria para que devuelva esa tabla, la cual puedes correr en tu servidor PostgreSQL para comprobarla vericidad de los datos.
 
 - **AIDatabaseSQL**  
-  This method maps the database structure into a JSON that Gemini analyzes to create an SQL query, which is then run by the PostgreSQL Server, returning the requested data.  
-  Since this method does not map the database values, token usage is lower, and the data is more reliable because it comes directly from the PostgreSQL Server. However, it doesn't completely prevent AI-generated errors. Occasionally, the SQL query might fail due to non-existing columns, in which case the result will include the query used to detect the error.
+  Este método mapea la estructura de la base de datos en un JSON que Gemini analiza para crear una consulta SQL, la cual es ejecutada por el servidor PostgreSQL directamente.  
+  Ya que este método no mapea los valores de la base de datos el uso de tokens es menor, y los datos que devuelve son mas fiables pues es el mismo Servidor el que los devuelve. Sin embargo, no evita completamente los errores que cometa la IA. A veces, la consulta SQL fallará debido a que la IA se inventa columnas que no existem, en ese caso el endpoint devolverá la consulta generada para que identifiques el fallo.
 
-## 💻 Technologies Used
+## 💻 Tecnologías usadas
 
-- **Programming Language:** C#
-- **Framework:** ASP.NET Core (Project built with .NET 8.0 Framework)
-- **NuGet Packages:**
+- **Lenguaje de programación:** C#
+- **Framework:** ASP.NET Core (creado con el Framework .NET 8.0)
+- **Paquetes NuGet:**
   - Swashbuckle.AspNetCore (6.4.0)
   - Swashbuckle.AspNetCore.Annotations (6.6.2)
   - Npgsql (8.0.5)
   - RestSharp (112.1.0)
   - Newtonsoft.Json (13.0.3)
-- **Other Tools:**
+- **Otras herramientas:**
   - PostgreSQL (16.3)
   - pgAdmin 4 (8.9)
   - Gemini API Key (1.5 Flash)
-- **Recommended IDE:** Visual Studio 2022
+- **IDE Recomendado:** Visual Studio 2022
