@@ -22,7 +22,7 @@ Google permite el uso gratuito de esta API sin añadir ninguna forma de pago, pe
 En Google AI Studio, puedes monitorizar el uso de la IA haciendo clic en 'Ver datos de uso' en la columna de 'Plan' en la tabla con todos tus proyectos. Recomiendo monitorizarla desde la pestaña de 'Cuota y límites del sistema' y ordenando por 'Porcentaje de uso actual', ya que es donde más información obtienes.
 
 Ya tienes todo para hacer funcionar la REST API.  
-Simpemente reemplaza los valores por defecto del string 'database' en `AIAPI/Controllers/AIController.cs` con la información de tu base de datos, y poner la clave de API en el string 'apiKey'.
+Simpemente reemplaza los valores por defecto del string 'database' en [AIAPI/Controllers/AIController.cs](https://github.com/LuisMiSanVe/AI_DB_REST_API/blob/main/AIAPI/Controllers/AIController.cs) con la información de tu base de datos, y poner la clave de API en el string 'apiKey'.
 
 ## 📖 Sobre la REST API
 
