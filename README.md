@@ -39,16 +39,16 @@ La API tiene un Controlador con dos endpoints:
 
 ## 💻 Tecnologías usadas
 
-- **Lenguaje de programación:** C#
-- **Framework:** ASP.NET Core (creado con el Framework .NET 8.0)
-- **Paquetes NuGet:**
-  - Swashbuckle.AspNetCore (6.4.0)
-  - Swashbuckle.AspNetCore.Annotations (6.6.2)
-  - Npgsql (8.0.5)
-  - RestSharp (112.1.0)
-  - Newtonsoft.Json (13.0.3)
-- **Otras herramientas:**
-  - PostgreSQL (16.3)
-  - pgAdmin 4 (8.9)
+- Lenguaje de programación: [C#](https://dotnet.microsoft.com/es-es/languages/csharp)
+- Framework: [ASP.NET Core](https://dotnet.microsoft.com/es-es/apps/aspnet) (creado con el Framework [.Net](https://dotnet.microsoft.com/es-es/learn/dotnet/what-is-dotnet) 8.0)
+- Paquetes NuGet:
+  - [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) (6.4.0)
+  - [Swashbuckle.AspNetCore.Annotations](https://github.com/domaindrivendev/Swashbuckle.AspNetCore?tab=readme-ov-file#swashbuckleaspnetcoreannotations) (6.6.2)
+  - [Npgsql](https://www.npgsql.org/) (8.0.5)
+  - [RestSharp](https://restsharp.dev/) (112.1.0)
+  - [Newtonsoft.Json](https://www.newtonsoft.com/json) (13.0.3)
+- Otras herramientas:
+  - [PostgreSQL](https://www.postgresql.org/) (16.3)
+  - [pgAdmin 4](https://www.pgadmin.org/) (8.9)
   - Gemini API Key (1.5 Flash)
-- **IDE Recomendado:** Visual Studio 2022
+- IDE Recomendado: [Visual Studio](https://visualstudio.microsoft.com/) 2022
