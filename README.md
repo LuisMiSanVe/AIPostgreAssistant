@@ -1,4 +1,4 @@
-> [Ver en inglés/See in english](https://github.com/LuisMiSanVe/AI_DB_REST_API/tree/main)
+> [Ver en inglés/See in english](https://github.com/LuisMiSanVe/AIPostgreAssistant/tree/main)
 # 🤖 REST API para PostgreSQL Asistida por IA
 [![image](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://dotnet.microsoft.com/en-us/languages/csharp)
 [![image](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)](https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet)
