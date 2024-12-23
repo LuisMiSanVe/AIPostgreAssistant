@@ -1,4 +1,4 @@
-> [Ver en inglés/See in english](https://github.com/LuisMiSanVe/AIPostgreAssistant/tree/main)
+> [Ver en inglés/See in english](https://github.com/LuisMiSanVe/AIPostgreAssistant_API/tree/main)
 # 🤖 REST API para PostgreSQL Asistida por IA
 [![image](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://dotnet.microsoft.com/en-us/languages/csharp)
 [![image](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)](https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet)
@@ -9,7 +9,7 @@
 [![image](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)](https://visualstudio.microsoft.com/)
 
 >[!NOTE]
-> Esta es la REST API pensada para servidores o usar como cliente con Swagger. Hay una versión de [WinForms](https://github.com/LuisMiSanVe/AIPostgreAssistant_RESTAPI/tree/winforms) (solo inglés) pensada solo para ser usada como cliente.
+> Esta es la REST API pensada para servidores o usar como cliente con Swagger. Hay una versión de [WinForms]() pensada solo para ser usada como cliente.
 
 Esta REST API usa la IA de Google 'Gemini 1.5 Flash' para generar consultas a bases de datos PostgreSQL.  
 La IA convierte lenguaje natural a consultas SQL usando dos métodos diferentes, cada uno con sus ventajas y desvenajas.
